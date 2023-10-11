@@ -1,8 +1,11 @@
-
+"""
+Напишите функцию, которая принимает текст и возвращает два элемента: любое самое длинное слово и его длину.
+"""
 
 def main():
-    print("Hello, it's Tsvetkov Nikolay!")
-
+    list = str(input("Введите слово: ")).split()
+    print(f"Самое длинное слово: {max(list, key=len)}")
+    print(f"Длинна слова: {len(list)}")
 
 if __name__ == "__main__":
     main()
