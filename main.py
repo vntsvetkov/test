@@ -6,10 +6,7 @@
 
 def get_numbers(a: list, b: list) -> list | None:
     a.extend(b)
-    c = []
-    for elem in a:
-        if str(elem).isnumeric():
-            c.append(int(elem))
+    c = [int(elem) for elem in a if str(elem).isnumeric()].sort()
     if len(a):
         return c
     else:
@@ -17,5 +14,5 @@ def get_numbers(a: list, b: list) -> list | None:
 
 
 if __name__ == "__main__":
-    main()
+    get_numbers()
 
